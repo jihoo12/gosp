@@ -1,0 +1,10 @@
+<%-- This comment does not appear in the generated HTML. --%>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>About GOSP</title></head>
+<body>
+  <h1>About GOSP</h1>
+  <p>This text is rendered using a raw expression: <%- "<strong>Go-powered</strong>" %></p>
+  <a href="/">Go back</a>
+</body>
+</html>

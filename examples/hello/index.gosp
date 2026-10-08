@@ -1,0 +1,25 @@
+<%@ import "strings" %>
+<%
+name := strings.TrimSpace(r.URL.Query().Get("name"))
+if name == "" {
+    name = "World"
+}
+%>
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>GOSP example</title></head>
+<body>
+  <h1>Hello, <%= name %>!</h1>
+  <p>These items are generated with a Go loop:</p>
+  <ul>
+  <% for n := 1; n <= 3; n++ { %>
+    <li>Item <%= n %></li>
+  <% } %>
+  </ul>
+  <form method="GET">
+    <label>Your name: <input name="name" value="<%= name %>"></label>
+    <button type="submit">Say hello</button>
+  </form>
+  <a href="/about">About this example</a>
+</body>
+</html>
